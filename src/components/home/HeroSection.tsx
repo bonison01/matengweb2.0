@@ -72,7 +72,7 @@ const HeroSection = () => {
         >
           <CarouselContent>
             {/* Slide 1: Education Competition */}
-            <CarouselItem>
+            {/* <CarouselItem>
               <div className="relative">
                 <div className="absolute inset-0 h-[600px] md:h-[700px] w-full">
                   <div
@@ -135,7 +135,7 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-            </CarouselItem>
+            </CarouselItem> */}
 
             {/* Slide 2: Community Focus */}
             <CarouselItem>
