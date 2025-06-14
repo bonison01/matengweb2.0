@@ -14,7 +14,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Delivery", path: "/delivery-rates" },
+    { name: "Cargo", path: "/https://cargo-gules.vercel.app/" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -52,12 +52,18 @@ const Navbar = () => {
                   {item.name}
                 </NavLink>
               ))}
+              <a href="tel:8787649928">
+                <Button className="bg-[#065303] text-white hover:bg-[#054802]">
+                  Call for Delivery
+                </Button>
+              </a>
+
               {/* Wrap the Button with NavLink */}
-              <NavLink to="/competition">
+              {/* <NavLink to="/competition">
                 <Button className="bg-[#065303] text-white hover:bg-[#054802]">
                   Apply Maths Competition
                 </Button>
-              </NavLink>
+              </NavLink> */}
 
             </div>
           </div>

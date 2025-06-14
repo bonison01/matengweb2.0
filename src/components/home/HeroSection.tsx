@@ -157,7 +157,8 @@ const HeroSection = () => {
                       Bringing Communities Together
                     </h1>
                     <p className="text-lg md:text-xl mb-8 text-gray-100 max-w-xl mx-auto">
-                      Mateng Hub Connect is revolutionizing hyperlocal delivery with innovative solutions across four powerful verticals. Established in December 2022, we're building the future of community commerce.
+                      Mateng Hub Connect is revolutionizing hyperlocal delivery with innovative solutions across four powerful verticals.
+                      {/* Established in December 2022, we're building the future of community commerce. */}
                     </p>
                     <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 justify-center">
                       <Button
