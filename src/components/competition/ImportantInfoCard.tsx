@@ -22,10 +22,11 @@ const ImportantInfoCard = () => {
         <div>
           <h3 className="font-semibold">Key Dates:</h3>
           <ul className="list-disc list-inside space-y-1">
-            <li>Last date for registration: May 30, 2025</li>
-            <li>Admit card issue: June 3, 2025</li>
-            <li>Competition date: June 8, 2025</li>
-            <li>Award ceremony: June 22, 2025</li>
+            {/* <li>Last date for registration: May 30, 2025</li> */}
+            {/* <li>Admit card issue: June 3, 2025</li> */}
+            <li>Competition date: June 22, 2025</li>
+            <li>Result Out: June 25, 2025</li>
+            <li>Award ceremony: To be announce soon</li>
           </ul>
         </div>
         <div>

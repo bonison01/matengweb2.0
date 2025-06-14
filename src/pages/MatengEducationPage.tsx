@@ -40,12 +40,12 @@ const MatengEducationPage = () => {
   };
 
   const [countdown, setCountdown] = useState(
-    calculateCountdown("2025-06-08T00:00:00")
+    calculateCountdown("2025-06-22T00:00:00")
   );
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCountdown(calculateCountdown("2025-06-08T00:00:00"));
+      setCountdown(calculateCountdown("2025-06-22T00:00:00"));
     }, 1000);
 
     return () => clearInterval(interval);
@@ -63,32 +63,32 @@ const MatengEducationPage = () => {
       category: "Mathematics",
       duration: "8 weeks",
       level: "Elementary",
-      startDate: "June 8, 2025",
+      startDate: "June 22, 2025",
     },
-    {
-      id: 2,
-      title: "Science Discovery Workshop",
-      description:
-        "Explore scientific concepts through hands-on experiments and engaging activities designed for young minds.",
-      image:
-        "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      category: "Science",
-      duration: "6 weeks",
-      level: "Elementary",
-      startDate: "June 20, 2025",
-    },
-    {
-      id: 3,
-      title: "Advanced Calculus for High School",
-      description:
-        "Prepare for college-level mathematics with our advanced calculus program for students in grades 11-12.",
-      image:
-        "https://images.unsplash.com/photo-1509869175650-a1d97972541a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      category: "Mathematics",
-      duration: "10 weeks",
-      level: "High School",
-      startDate: "July 1, 2025",
-    },
+    // {
+    //   id: 2,
+    //   title: "Science Discovery Workshop",
+    //   description:
+    //     "Explore scientific concepts through hands-on experiments and engaging activities designed for young minds.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    //   category: "Science",
+    //   duration: "6 weeks",
+    //   level: "Elementary",
+    //   startDate: "June 20, 2025",
+    // },
+    // {
+    //   id: 3,
+    //   title: "Advanced Calculus for High School",
+    //   description:
+    //     "Prepare for college-level mathematics with our advanced calculus program for students in grades 11-12.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1509869175650-a1d97972541a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    //   category: "Mathematics",
+    //   duration: "10 weeks",
+    //   level: "High School",
+    //   startDate: "July 1, 2025",
+    // },
   ];
 
   const pastCompetitions = [
@@ -161,7 +161,7 @@ const MatengEducationPage = () => {
                 <div className="md:w-3/5 p-6 md:p-8 bg-gradient-to-br from-green-700 to-teal-700">
                   <div>
                     <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">
-                      Maths Competition June 8 2025
+                      Maths Competition June 22 2025
                     </h2>
                     <p className="mb-3 text-white/90 text-lg font-medium">
                       For students of class 4, 5, 6

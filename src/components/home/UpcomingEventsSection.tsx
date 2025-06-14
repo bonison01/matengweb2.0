@@ -11,7 +11,7 @@ const UpcomingEventsSection = () => {
     title: "June Maths Competition",
     description:
       "Join our prestigious education competition and connect with industry leaders. Open to students in grades 4-6.",
-    event_date: "2025-06-08T00:00:00", // Ensure it's in ISO format for consistency
+    event_date: "2025-06-22T00:00:00", // ✅ Updated to 22 June 2025
     location: "To be Announced",
     is_featured: true,
     created_at: new Date().toISOString(),
@@ -24,7 +24,7 @@ const UpcomingEventsSection = () => {
   const featuredEvent = defaultEvent;
 
   // Calculate countdown for competition date
-  const competitionDate = new Date(featuredEvent.event_date || "2025-06-08T00:00:00");
+  const competitionDate = new Date(featuredEvent.event_date || "2025-06-22T00:00:00");
   const now = new Date();
   const daysLeft = Math.max(
     0,

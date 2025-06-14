@@ -59,14 +59,17 @@ const ApplicationSuccessPage = () => {
                     Important Dates
                   </h3>
                   <ul className="space-y-2 pl-6 text-gray-700">
+                    {/* <li>
+                      <span className="font-medium">Admit Card Issue:</span> June , 2025
+                    </li> */}
                     <li>
-                      <span className="font-medium">Admit Card Issue:</span> June 3, 2025
+                      <span className="font-medium">Competition Date:</span> June 22, 2025
                     </li>
                     <li>
-                      <span className="font-medium">Competition Date:</span> June 8, 2025
+                      <span className="font-medium">Result Out:</span> June 25, 2025
                     </li>
                     <li>
-                      <span className="font-medium">Award Ceremony:</span> June 22, 2025
+                      <span className="font-medium">Award Ceremony:</span> To be announce soon
                     </li>
                   </ul>
                 </div>

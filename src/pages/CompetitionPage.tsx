@@ -24,10 +24,10 @@ const CompetitionPage = () => {
   });
 
   // Competition important dates
-  const competitionDate = new Date("June 8, 2025");
-  const registrationDeadline = new Date("May 30, 2025");
-  const admitCardDate = new Date("June 3, 2025");
-  const awardCeremonyDate = new Date("June 22, 2025");
+  const competitionDate = new Date("June 22, 2025");
+  const registrationDeadline = new Date("June 20, 2025");
+  const admitCardDate = new Date("June 21, 2025");
+  const awardCeremonyDate = new Date("To be annouce soon");
 
   // Calculate countdown to competition date
   useEffect(() => {
@@ -153,10 +153,10 @@ const CompetitionPage = () => {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Important Dates</h3>
                   <p className="text-gray-600">
-                    <strong>Last Date for Registration:</strong> {formatDate(registrationDeadline)}<br />
-                    <strong>Admit Card Issue:</strong> {formatDate(admitCardDate)}<br />
+                    {/* <strong>Last Date for Registration:</strong> {formatDate(registrationDeadline)}<br /> */}
+                    {/* <strong>Admit Card Issue:</strong> {formatDate(admitCardDate)}<br /> */}
                     <strong>Competition Date:</strong> {formatDate(competitionDate)}<br />
-                    <strong>Award Ceremony:</strong> {formatDate(awardCeremonyDate)}
+                    <strong>Award Ceremony:</strong> To be annouce soon!
                   </p>
                 </div>
 

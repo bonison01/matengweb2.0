@@ -59,7 +59,7 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink to="/competition" className="text-gray-400 hover:text-white transition-colors">
-                  Maths Competition June 8 2025
+                  Maths Competition June 22 2025
                 </NavLink>
               </li>
               <li>
