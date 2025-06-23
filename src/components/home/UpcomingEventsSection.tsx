@@ -10,7 +10,7 @@ const UpcomingEventsSection = () => {
     id: "default",
     title: "June Maths Competition",
     description:
-      "Join our prestigious education competition and connect with industry leaders. Open to students in grades 4-6.",
+      "The answer key for the math competition held on May 22, 2025 has now been released. 🧮Results will be out very soon—stay tuned for updates!",
     event_date: "2025-06-22T00:00:00", // ✅ Updated to 22 June 2025
     location: "To be Announced",
     is_featured: true,
