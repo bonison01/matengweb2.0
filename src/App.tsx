@@ -26,6 +26,7 @@ import AdmitCardPage from "./pages/AdmitCardPage";
 import AdminApplicationsPage from "./pages/AdminApplicationsPage";
 import RedirectToDeliveryRates from "./pages/RedirectToDeliveryRates";
 import Marketplace from "./pages/Marketplace";
+import AnswerKeyPage from "./pages/AnswerKeyPage";
 
 
 const queryClient = new QueryClient();
@@ -80,7 +81,7 @@ const AppContent = () => {
         <Route path="/competition/admit-card" element={<AdmitCardPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/delivery" element={<MatengDeliveryPage />} />
-        <Route path="/discovery" element={<MatengDiscoveryPage />} />
+        {/* <Route path="/discovery" element={<MatengDiscoveryPage />} /> */}
         <Route path="/education" element={<MatengEducationPage />} />
         <Route path="/marketplace" element={<MatengMarketplacePage />} />
         <Route path="/auth" element={<AuthPage />} />
@@ -88,6 +89,7 @@ const AppContent = () => {
         <Route path="/admin/applications" element={<AdminApplicationsPage />} />
         <Route path="/delivery-rates" element={<RedirectToDeliveryRates />} />
         <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/answerKeyPage" element={<AnswerKeyPage />} />
 
 
         <Route path="*" element={<NotFound />} />

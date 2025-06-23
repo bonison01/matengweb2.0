@@ -8,6 +8,7 @@ import CompetitionPreviewSection from "@/components/home/CompetitionPreviewSecti
 import ContactPreviewSection from "@/components/home/ContactPreviewSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AnswerKeySection from "@/components/home/AnswerKeySection";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
           <CompetitionPreviewSection />
           <AboutPreviewSection />
           <ContactPreviewSection />
+          <AnswerKeySection />
         </div>
       </main>
       <Footer />
