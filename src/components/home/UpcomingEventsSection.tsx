@@ -61,7 +61,7 @@ const UpcomingEventsSection = () => {
                   <Badge className="bg-white/20 hover:bg-white/30 text-white">Education</Badge>
                 </div>
 
-                <div className="flex items-center mb-3">
+                {/* <div className="flex items-center mb-3">
                   <CalendarDays className="w-5 h-5 mr-2" />
                   <span className="text-sm font-medium">
                     {new Date(featuredEvent.event_date).toLocaleDateString(undefined, {
@@ -70,15 +70,15 @@ const UpcomingEventsSection = () => {
                       day: "numeric",
                     })}
                   </span>
-                </div>
+                </div> */}
 
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">{featuredEvent.title}</h3>
-                <p className="mb-6">{featuredEvent.description}</p>
+                {/* <p className="mb-6">{featuredEvent.description}</p> */}
 
-                <div className="flex items-center mb-6">
+                {/* <div className="flex items-center mb-6">
                   <Trophy className="w-5 h-5 mr-2" />
                   <span className="font-medium">Win Exciting Prizes.</span>
-                </div>
+                </div> */}
 
                 <div className="mt-auto flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
                   <Button asChild size="lg" className="bg-white text-emerald-600 hover:bg-white/90">
