@@ -16,7 +16,7 @@ const AnswerKeyPage = () => {
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <h2 className="text-2xl font-semibold mb-4 text-primary">Class 4</h2>
                             <a
-                                href="https://drive.google.com/file/d/1PR00b1B91PT20RVj0Y0YKKgg47zJVkUy/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1EKGLywUCljJNC0TeOyzV6ZjJ3pc8zxNS/view?usp=drive_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-block bg-primary text-white font-medium px-5 py-3 rounded hover:bg-primary-dark transition"
