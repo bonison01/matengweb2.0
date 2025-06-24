@@ -43,11 +43,11 @@ const CompetitionPreviewSection = () => {
           </div>
         </div>
 
-        <div className="text-center">
+        {/* <div className="text-center">
           <Button asChild size="lg" variant="outline" className="bg-white/10 border-white hover:bg-white/20">
             <NavLink to="/competition/apply">Apply Now</NavLink>
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
