@@ -28,7 +28,7 @@ const AnswerKeyPage = () => {
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <h2 className="text-2xl font-semibold mb-4 text-primary">Class 5</h2>
                             <a
-                                href="https://drive.google.com/file/d/1pyt3wfkHLBIcNxMktSFkfOBRkSj_SpFz/view?usp=drive_link"
+                                href="https://drive.google.com/file/d/1NoaOLoJAT1mYHHnUvZh-0PS-8-btxccc/view?usp=drive_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-block bg-primary text-white font-medium px-5 py-3 rounded hover:bg-primary-dark transition"
