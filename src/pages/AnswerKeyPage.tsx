@@ -11,7 +11,7 @@ const AnswerKeyPage = () => {
                     <p className="text-lg text-gray-600 mb-10">
                         Download the official answer key PDFs for each class below.
                     </p>
-
+{/* 
                     <div className="bg-white p-6 rounded-lg shadow-md">
                         <h2 className="text-2xl font-semibold mb-4 text-primary">Exam Result</h2>
                         <a
@@ -22,7 +22,7 @@ const AnswerKeyPage = () => {
                         >
                             Download PDF
                         </a>
-                    </div>
+                    </div> */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <h2 className="text-2xl font-semibold mb-4 text-primary">Class 4</h2>

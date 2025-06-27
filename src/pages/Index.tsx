@@ -23,7 +23,7 @@ const Index = () => {
           <CompetitionPreviewSection />
           <AboutPreviewSection />
           <ContactPreviewSection />
-          <AnswerKeySection />
+          {/* <AnswerKeySection /> */}
         </div>
       </main>
       <Footer />
