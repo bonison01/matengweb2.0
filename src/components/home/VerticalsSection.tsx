@@ -45,7 +45,7 @@ const VerticalsSection = () => {
       description: "Explore and discover hidden gems in your local community, from restaurants to services.",
       icon: <Map size={24} />,
       color: "#0EA5E9",
-      link: "https://matengmarket.com/discover",
+      link: "/discovery",
     },
     {
       title: "Mateng Education",
