@@ -27,6 +27,7 @@ import AdminApplicationsPage from "./pages/AdminApplicationsPage";
 import RedirectToDeliveryRates from "./pages/RedirectToDeliveryRates";
 import Marketplace from "./pages/Marketplace";
 import AnswerKeyPage from "./pages/AnswerKeyPage";
+import ExamResult from "./pages/ExamResult";
 
 
 const queryClient = new QueryClient();
@@ -90,6 +91,7 @@ const AppContent = () => {
         <Route path="/delivery-rates" element={<RedirectToDeliveryRates />} />
         <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/answerKeyPage" element={<AnswerKeyPage />} />
+        <Route path="/examResult" element={<ExamResult />} />
 
 
         <Route path="*" element={<NotFound />} />

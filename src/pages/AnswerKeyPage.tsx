@@ -12,6 +12,17 @@ const AnswerKeyPage = () => {
                         Download the official answer key PDFs for each class below.
                     </p>
 
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h2 className="text-2xl font-semibold mb-4 text-primary">Exam Result</h2>
+                        <a
+                            href="https://drive.google.com/file/d/1yOMBAhNW7sDRjXPzK26o884xV_McQH-P/view?usp=drive_link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block bg-primary text-white font-medium px-5 py-3 rounded hover:bg-primary-dark transition"
+                        >
+                            Download PDF
+                        </a>
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <h2 className="text-2xl font-semibold mb-4 text-primary">Class 4</h2>
