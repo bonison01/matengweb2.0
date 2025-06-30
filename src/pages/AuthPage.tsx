@@ -124,7 +124,7 @@ const AuthPage = () => {
         <Tabs defaultValue="login" className="w-full">
           <TabsList className="grid grid-cols-2 w-full">
             <TabsTrigger value="login">Login</TabsTrigger>
-            <TabsTrigger value="signup">Sign Up</TabsTrigger>
+            {/* <TabsTrigger value="signup">Sign Up</TabsTrigger> */}
           </TabsList>
           
           <TabsContent value="login">

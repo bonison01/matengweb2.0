@@ -27,10 +27,12 @@ const Navbar = () => {
     {
       name: "Services",
       subItems: [
-        { name: "Discovery", path: "/discovery" },
+        // { name: "Discovery", path: "/discovery" },
+        { name: "Pickup and Drop", path: "https://www.matengmarket.com/delivery-rates" },
+        { name: "Invoice Generator Beta", path: "https://invoicely-secure-flow.vercel.app/" },
         {
           name: "Cargo",
-          path: "https://cargo-gules.vercel.app/",
+          path: "https://cargo4.vercel.app/",
           external: true,
         },
       ],
@@ -164,9 +166,8 @@ const Navbar = () => {
                 >
                   {item.name}
                   <ChevronDown
-                    className={`w-4 h-4 transition-transform ${
-                      openDropdown === item.name ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform ${openDropdown === item.name ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 {openDropdown === item.name && (
