@@ -29,7 +29,7 @@ const Navbar = () => {
       subItems: [
         // { name: "Discovery", path: "/discovery" },
         { name: "Pickup and Drop", path: "https://www.matengmarket.com/delivery-rates" },
-        { name: "Invoice Generator Beta", path: "https://inv-xi.vercel.app/" },
+        { name: "Invoice Generator Beta", path: "https://invoice-one-snowy.vercel.app/" },
         {
           name: "Cargo",
           path: "https://cargo4.vercel.app/",
