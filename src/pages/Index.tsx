@@ -20,7 +20,7 @@ const Index = () => {
         <AchievementsSection />
         <div className="container mx-auto px-6">
           <VerticalsSection />
-          <CompetitionPreviewSection />
+          {/* <CompetitionPreviewSection /> */}
           <AboutPreviewSection />
           <ContactPreviewSection />
           {/* <AnswerKeySection /> */}
