@@ -8,6 +8,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useNavigate } from "react-router-dom"
 import { TablesInsert } from "@/integrations/supabase/types"
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function InquiryForm() {
   const { toast } = useToast()
@@ -95,6 +97,7 @@ export default function InquiryForm() {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
+            <Navbar />
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-lg bg-gray-50 p-8 rounded-lg shadow-md border"
@@ -190,6 +193,7 @@ export default function InquiryForm() {
           </Button>
         </div>
       </form>
+            <Footer />
     </div>
   )
 }
