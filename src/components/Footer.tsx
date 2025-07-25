@@ -57,11 +57,11 @@ const Footer = () => {
                   Our Services
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink to="/competition" className="text-gray-400 hover:text-white transition-colors">
                   Maths Competition June 22 2025
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink to="/contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact Us
@@ -113,7 +113,7 @@ const Footer = () => {
               <li className="flex items-center">
                 <Phone size={20} className="mr-2 text-primary shrink-0" />
                 <a href="tel:+11234567890" className="text-gray-400 hover:text-white transition-colors">
-                  +1 (91) 8787649928
+                  +(91) 8787649928
                 </a>
               </li>
               <li className="flex items-center">
