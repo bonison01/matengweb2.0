@@ -86,7 +86,7 @@ const AppContent = () => {
         <Route path="/admin/applications" element={<AdminApplicationsPage />} />
         <Route path="/answerKeyPage" element={<AnswerKeyPage />} />
         <Route path="/examResult" element={<ExamResult />} />
-        <Route path="/InquiryForm" element={<InquiryFormPage />} />
+        <Route path="/createweb" element={<InquiryFormPage />} />
 
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
