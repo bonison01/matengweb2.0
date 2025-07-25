@@ -62,7 +62,9 @@ export default function InquiryForm() {
   const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
@@ -71,12 +73,7 @@ export default function InquiryForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    if (
-      !formData.full_name ||
-      !formData.email ||
-      !formData.message ||
-      !formData.event_id
-    ) {
+    if (!formData.full_name || !formData.email || !formData.message || !formData.event_id) {
       toast({
         title: "Validation Error",
         description: "Please fill out all required fields.",
@@ -120,76 +117,104 @@ export default function InquiryForm() {
 
   return (
     <div>
-      <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
+      <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4 py-12 space-y-6">
         <Navbar />
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-lg bg-gray-50 p-8 rounded-lg shadow-md border"
+          className="w-full max-w-lg bg-gray-50 p-8 rounded-lg shadow-md border space-y-6"
+          noValidate
         >
-          <h1 className="text-2xl font-semibold text-gray-800 mb-2">
+          <h1 className="text-2xl font-semibold text-gray-800 mb-2 text-center">
             We'd love to learn more about you.
           </h1>
 
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 mb-6 text-center">
             We're offering a <strong>free basic single landing page</strong> for your business to showcase your product or service.
           </p>
 
           <div className="space-y-4">
-            <Input
-              name="full_name"
-              placeholder="Full Name"
-              value={formData.full_name || ""}
-              onChange={handleChange}
-              required
-            />
-            <Input
-              name="email"
-              type="email"
-              placeholder="Email"
-              value={formData.email || ""}
-              onChange={handleChange}
-              required
-            />
-            <Input
-              name="phone"
-              type="tel"
-              placeholder="Phone Number"
-              value={formData.phone || ""}
-              onChange={handleChange}
-            />
-            <Input
-              name="address"
-              placeholder="Address"
-              value={formData.address || ""}
-              onChange={handleChange}
-            />
-            <Input
-              name="business_name"
-              placeholder="Business Name"
-              value={formData.business_name || ""}
-              onChange={handleChange}
-            />
-            <Input
-              name="business_product_or_service"
-              placeholder="Business Product or Service"
-              value={formData.business_product_or_service || ""}
-              onChange={handleChange}
-            />
-            <Input
-              name="established_year"
-              type="number"
-              placeholder="Business Established Year"
-              value={formData.established_year || ""}
-              onChange={handleChange}
-            />
+            <label className="block">
+              <span className="text-sm font-medium text-gray-700 mb-1">Full Name *</span>
+              <Input
+                name="full_name"
+                placeholder="Full Name"
+                value={formData.full_name || ""}
+                onChange={handleChange}
+                required
+              />
+            </label>
 
             <label className="block">
-              <span className="text-gray-700">How did you hear about Mateng?</span>
+              <span className="text-sm font-medium text-gray-700 mb-1">Email *</span>
+              <Input
+                name="email"
+                type="email"
+                placeholder="Email"
+                value={formData.email || ""}
+                onChange={handleChange}
+                required
+              />
+            </label>
+
+            <label className="block">
+              <span className="text-sm font-medium text-gray-700 mb-1">Phone Number</span>
+              <Input
+                name="phone"
+                type="tel"
+                placeholder="Phone Number"
+                value={formData.phone || ""}
+                onChange={handleChange}
+              />
+            </label>
+
+            <label className="block">
+              <span className="text-sm font-medium text-gray-700 mb-1">Address</span>
+              <Input
+                name="address"
+                placeholder="Address"
+                value={formData.address || ""}
+                onChange={handleChange}
+              />
+            </label>
+
+            <label className="block">
+              <span className="text-sm font-medium text-gray-700 mb-1">Business Name</span>
+              <Input
+                name="business_name"
+                placeholder="Business Name"
+                value={formData.business_name || ""}
+                onChange={handleChange}
+              />
+            </label>
+
+            <label className="block">
+              <span className="text-sm font-medium text-gray-700 mb-1">Business Product or Service</span>
+              <Input
+                name="business_product_or_service"
+                placeholder="Business Product or Service"
+                value={formData.business_product_or_service || ""}
+                onChange={handleChange}
+              />
+            </label>
+
+            <label className="block">
+              <span className="text-sm font-medium text-gray-700 mb-1">Business Established Year</span>
+              <Input
+                name="established_year"
+                type="number"
+                placeholder="Business Established Year"
+                value={formData.established_year || ""}
+                onChange={handleChange}
+              />
+            </label>
+
+            <label className="block">
+              <span className="text-sm font-medium text-gray-700 mb-1">How did you hear about Mateng?</span>
               <select
                 name="how_did_you_hear"
                 value={formData.how_did_you_hear || ""}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm px-3 py-2 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               >
                 <option value="">Select an option</option>
                 <option value="social_media">Social Media</option>
@@ -201,12 +226,12 @@ export default function InquiryForm() {
             </label>
 
             <label className="block">
-              <span className="text-gray-700">Do you have a domain already?</span>
+              <span className="text-sm font-medium text-gray-700 mb-1">Do you have a domain already?</span>
               <select
                 name="has_domain"
                 value={formData.has_domain || ""}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm px-3 py-2 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               >
                 <option value="">Select an option</option>
                 <option value="yes">Yes</option>
@@ -215,12 +240,12 @@ export default function InquiryForm() {
             </label>
 
             <label className="block">
-              <span className="text-gray-700">What type of website are you looking for?</span>
+              <span className="text-sm font-medium text-gray-700 mb-1">What type of website are you looking for?</span>
               <select
                 name="website_type"
                 value={formData.website_type || ""}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm px-3 py-2 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               >
                 <option value="">Select a type</option>
                 <option value="ecommerce">Ecommerce</option>
@@ -235,12 +260,12 @@ export default function InquiryForm() {
             </label>
 
             <label className="block">
-              <span className="text-gray-700">Does your business offer delivery?</span>
+              <span className="text-sm font-medium text-gray-700 mb-1">Does your business offer delivery?</span>
               <select
                 name="does_delivery"
                 value={formData.does_delivery || ""}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm px-3 py-2 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               >
                 <option value="">Select an option</option>
                 <option value="yes">Yes</option>
@@ -251,12 +276,14 @@ export default function InquiryForm() {
             {formData.does_delivery === "yes" && (
               <>
                 <label className="block">
-                  <span className="text-gray-700">Can you deliver outside Imphal on the same day?</span>
+                  <span className="text-sm font-medium text-gray-700 mb-1">
+                    Can you deliver outside Imphal on the same day?
+                  </span>
                   <select
                     name="can_deliver_outside_imphal"
                     value={formData.can_deliver_outside_imphal || ""}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                    className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm px-3 py-2 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   >
                     <option value="">Select an option</option>
                     <option value="yes">Yes</option>
@@ -265,12 +292,14 @@ export default function InquiryForm() {
                 </label>
 
                 <label className="block">
-                  <span className="text-gray-700">Can you deliver within Imphal city in 2–3 hours?</span>
+                  <span className="text-sm font-medium text-gray-700 mb-1">
+                    Can you deliver within Imphal city in 2–3 hours?
+                  </span>
                   <select
                     name="can_deliver_within_city"
                     value={formData.can_deliver_within_city || ""}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                    className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm px-3 py-2 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   >
                     <option value="">Select an option</option>
                     <option value="yes">Yes</option>
@@ -280,24 +309,26 @@ export default function InquiryForm() {
               </>
             )}
 
-            {/* <Textarea
-              name="message"
-              placeholder="Your message"
-              value={formData.message || ""}
-              onChange={handleChange}
-              rows={5}
-              required
-            /> */}
-          </div>
+            <label className="block">
+              <span className="text-sm font-medium text-gray-700 mb-1">Message *</span>
+              <Textarea
+                name="message"
+                placeholder="Write your message here..."
+                value={formData.message || ""}
+                onChange={handleChange}
+                required
+                rows={4}
+                className="w-full"
+              />
+            </label>
 
-          <div className="mt-6">
             <Button type="submit" disabled={loading} className="w-full">
-              {loading ? "Submitting..." : "Submit"}
+              {loading ? "Submitting..." : "Submit Inquiry"}
             </Button>
           </div>
         </form>
+        <Footer />
       </div>
-      <Footer />
     </div>
   )
 }
