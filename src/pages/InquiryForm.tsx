@@ -280,14 +280,14 @@ export default function InquiryForm() {
               </>
             )}
 
-            <Textarea
+            {/* <Textarea
               name="message"
               placeholder="Your message"
               value={formData.message || ""}
               onChange={handleChange}
               rows={5}
               required
-            />
+            /> */}
           </div>
 
           <div className="mt-6">
