@@ -87,7 +87,7 @@ export default function InquiryForm() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gray-50">
         <h1 className="text-2xl font-bold mb-2">Thank you!</h1>
-        <p className="text-gray-600 mb-4">Your message has been received.</p>
+        <p className="text-gray-600 mb-4">Thank you for your submission! We're excited to build your free simple website. Our team will contact you soon with the next steps.</p>
         <Button onClick={() => navigate("/")}>Back to Home</Button>
       </div>
     )
@@ -99,7 +99,7 @@ export default function InquiryForm() {
         onSubmit={handleSubmit}
         className="w-full max-w-lg bg-gray-50 p-8 rounded-lg shadow-md border"
       >
-        <h1 className="text-2xl font-semibold text-gray-800 mb-6">Send an Inquiry</h1>
+        <h1 className="text-2xl font-semibold text-gray-800 mb-6">We'd love to learn more about you.</h1>
 
         <div className="space-y-4">
           <Input
