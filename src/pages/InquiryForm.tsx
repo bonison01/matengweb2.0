@@ -96,6 +96,7 @@ export default function InquiryForm() {
   }
 
   return (
+    <div>
     <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
             <Navbar />
       <form
@@ -193,7 +194,8 @@ export default function InquiryForm() {
           </Button>
         </div>
       </form>
-            <Footer />
+    </div>
+    <Footer />
     </div>
   )
 }
