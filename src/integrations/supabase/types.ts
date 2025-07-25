@@ -333,6 +333,62 @@ export type Database = {
         }
         Relationships: []
       }
+      inquiries: {
+  Row: {
+    id: string
+    full_name: string
+    email: string
+    address: string
+    business_name: string
+    message: string
+    business_product_or_service: string
+    how_did_you_hear: string
+    has_domain: string | null
+    event_id: string
+    phone: string | null
+    organization: string | null
+    user_id: string | null
+    additional_info: Json | null
+    created_at: string
+    updated_at: string
+  }
+  Insert: {
+    id?: string
+    full_name: string
+    email: string
+    message: string
+    event_id: string
+    phone?: string | null
+    organization?: string | null
+    user_id?: string | null
+    additional_info?: Json | null
+    created_at?: string
+    updated_at?: string
+  }
+  Update: {
+    id?: string
+    full_name?: string
+    email?: string
+    message?: string
+    event_id?: string
+    phone?: string | null
+    organization?: string | null
+    user_id?: string | null
+    additional_info?: Json | null
+    created_at?: string
+    updated_at?: string
+  }
+  Relationships: [
+    {
+      foreignKeyName: "inquiries_event_id_fkey"
+      columns: ["event_id"]
+      isOneToOne: false
+      referencedRelation: "events"
+      referencedColumns: ["id"]
+    }
+  ]
+}
+
       profiles: {
         Row: {
           created_at: string

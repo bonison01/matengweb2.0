@@ -26,6 +26,7 @@ import AdmitCardPage from "./pages/AdmitCardPage";
 import AdminApplicationsPage from "./pages/AdminApplicationsPage";
 import AnswerKeyPage from "./pages/AnswerKeyPage";
 import ExamResult from "./pages/ExamResult";
+import InquiryFormPage from "./pages/InquiryForm";
 
 const queryClient = new QueryClient();
 
@@ -85,6 +86,7 @@ const AppContent = () => {
         <Route path="/admin/applications" element={<AdminApplicationsPage />} />
         <Route path="/answerKeyPage" element={<AnswerKeyPage />} />
         <Route path="/examResult" element={<ExamResult />} />
+        <Route path="/InquiryForm" element={<InquiryFormPage />} />
 
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
