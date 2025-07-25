@@ -25,6 +25,10 @@ type InquiryFormData = {
   user_id?: string | null
   additional_info?: any
   website_type?: string | null
+  does_delivery?: string | null
+  can_deliver_outside_imphal?: string | null
+  can_deliver_within_city?: string | null
+  established_year?: string | null
 }
 
 export default function InquiryForm() {
@@ -48,6 +52,10 @@ export default function InquiryForm() {
     user_id: null,
     additional_info: null,
     website_type: null,
+    does_delivery: null,
+    can_deliver_outside_imphal: null,
+    can_deliver_within_city: null,
+    established_year: null,
   })
 
   const [loading, setLoading] = useState(false)
@@ -167,6 +175,13 @@ export default function InquiryForm() {
               value={formData.business_product_or_service || ""}
               onChange={handleChange}
             />
+            <Input
+              name="established_year"
+              type="number"
+              placeholder="Business Established Year"
+              value={formData.established_year || ""}
+              onChange={handleChange}
+            />
 
             <label className="block">
               <span className="text-gray-700">How did you hear about Mateng?</span>
@@ -177,16 +192,16 @@ export default function InquiryForm() {
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
               >
                 <option value="">Select an option</option>
-                <option value="social_media">Facebook</option>
-                <option value="Instagram">Instagram</option>
-                <option value="Youtube">Youtube</option>
+                <option value="social_media">Social Media</option>
                 <option value="friend_or_family">Friend or Family</option>
+                <option value="search_engine">Search Engine</option>
+                <option value="advertisement">Advertisement</option>
                 <option value="other">Other</option>
               </select>
             </label>
 
             <label className="block">
-              <span className="text-gray-700">Do you have any website domain before?</span>
+              <span className="text-gray-700">Do you have a domain already?</span>
               <select
                 name="has_domain"
                 value={formData.has_domain || ""}
@@ -210,14 +225,60 @@ export default function InquiryForm() {
                 <option value="">Select a type</option>
                 <option value="ecommerce">Ecommerce</option>
                 <option value="blogs">Blogs</option>
-                <option value="portfolio">Portfolio Website</option>
+                <option value="portfolio">Portfolio</option>
                 <option value="news">News Website</option>
-                <option value="social_media">Social Media Website</option>
-                <option value="educational">Educational Website</option>
-                <option value="personal">Personal Website</option>
+                <option value="social_media">Social Media</option>
+                <option value="educational">Educational</option>
+                <option value="personal">Personal</option>
                 <option value="other">Other</option>
               </select>
             </label>
+
+            <label className="block">
+              <span className="text-gray-700">Does your business offer delivery?</span>
+              <select
+                name="does_delivery"
+                value={formData.does_delivery || ""}
+                onChange={handleChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+              >
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </label>
+
+            {formData.does_delivery === "yes" && (
+              <>
+                <label className="block">
+                  <span className="text-gray-700">Can you deliver outside Imphal on the same day?</span>
+                  <select
+                    name="can_deliver_outside_imphal"
+                    value={formData.can_deliver_outside_imphal || ""}
+                    onChange={handleChange}
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                  >
+                    <option value="">Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </label>
+
+                <label className="block">
+                  <span className="text-gray-700">Can you deliver within Imphal city in 2–3 hours?</span>
+                  <select
+                    name="can_deliver_within_city"
+                    value={formData.can_deliver_within_city || ""}
+                    onChange={handleChange}
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                  >
+                    <option value="">Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </label>
+              </>
+            )}
 
             <Textarea
               name="message"
